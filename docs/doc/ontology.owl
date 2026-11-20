@@ -1,0 +1,1644 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://wanqin-liu.github.io/ahkto/"
+     xml:base="https://wanqin-liu.github.io/ahkto/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:ahkto="https://wanqin-liu.github.io/ahkto/">
+    <owl:Ontology rdf:about="https://wanqin-liu.github.io/ahkto/">
+        <owl:versionIRI rdf:resource="https://wanqin-liu.github.io/ahkto/0.1.0"/>
+        <owl:imports rdf:resource="http://www.cidoc-crm.org/cidoc-crm/owl/7.1.3/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#scopeNote -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#scopeNote"/>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/hasAATReference -->
+
+
+    <owl:AnnotationProperty rdf:about="https://wanqin-liu.github.io/ahkto/hasAATReference">
+        <skos:scopeNote xml:lang="en">Associates an ontology class with a corresponding concept in the Getty Art &amp; Architecture Thesaurus (AAT) as a terminological reference. This annotation supports terminology reuse and traceability without asserting semantic equivalence or a formal class-level mapping.</skos:scopeNote>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/adjacentTo -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/adjacentTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P122_borders_with"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalSpace"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalSpace"/>
+        <rdfs:label xml:lang="en">is adjacent to</rdfs:label>
+        <skos:scopeNote xml:lang="en">Relates two distinct spaces that meet at a common boundary. The relation reads in either direction and does not require a doorway between the spaces.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/bounds -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/bounds">
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalSpace"/>
+        <rdfs:label xml:lang="en">bounds</rdfs:label>
+        <skos:scopeNote xml:lang="en">Relates an architectural element to a space whose boundary it defines in whole or in part.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/containsArchitecturalSpace -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/containsArchitecturalSpace">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P89i_contains"/>
+        <owl:inverseOf rdf:resource="https://wanqin-liu.github.io/ahkto/isContainedAsAnArchitecturalSpaceIn"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/Storey"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalSpace"/>
+        <rdfs:label xml:lang="en">contains architectural space</rdfs:label>
+        <skos:scopeNote xml:lang="en">Relates a storey to an architectural space lying within its spatial extent.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/containsElement -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/containsElement">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P53i_is_former_or_current_location_of"/>
+        <owl:inverseOf rdf:resource="https://wanqin-liu.github.io/ahkto/isContainedAsAnElementIn"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalSpace"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:label xml:lang="en">contains element</rdfs:label>
+        <skos:scopeNote xml:lang="en">Records an architectural element located within the space. Boundary elements are documented with is bounded by when that is the observed relationship.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/containsSculpture -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/containsSculpture">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P53i_is_former_or_current_location_of"/>
+        <owl:inverseOf rdf:resource="https://wanqin-liu.github.io/ahkto/isContainedAsASculptureIn"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalSpace"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/SculptureObject"/>
+        <rdfs:label xml:lang="en">contains sculpture</rdfs:label>
+        <skos:scopeNote xml:lang="en">Records the location of a sculptural object in a space. It applies to both freestanding and installed objects.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/hasArchType -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/hasArchType">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"/>
+        <owl:inverseOf rdf:resource="https://wanqin-liu.github.io/ahkto/isArchTypeOf"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/Arch"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/ArchType"/>
+        <rdfs:label xml:lang="en">has arch type</rdfs:label>
+        <skos:scopeNote xml:lang="en">Assigns a form or construction category to an individual arch.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/hasArchitecturalDecorationType -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/hasArchitecturalDecorationType">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"/>
+        <owl:inverseOf rdf:resource="https://wanqin-liu.github.io/ahkto/isArchitecturalDecorationTypeOf"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalDecorativeFeature"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalDecorationType"/>
+        <rdfs:label xml:lang="en">has architectural decoration type</rdfs:label>
+        <skos:scopeNote xml:lang="en">Classifies a decorative feature by a recorded aspect of its medium, form or motif.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/hasArchitecturalSpace -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/hasArchitecturalSpace">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P59_has_section"/>
+        <owl:inverseOf rdf:resource="https://wanqin-liu.github.io/ahkto/isArchitecturalSpaceOf"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/Building"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalSpace"/>
+        <rdfs:label xml:lang="en">has architectural space</rdfs:label>
+        <skos:scopeNote xml:lang="en">Relates a building to an identifiable architectural space belonging to it. This relation can describe a space extending across several storeys.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/hasArchitecturalStratigraphicUnit -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/hasArchitecturalStratigraphicUnit">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of"/>
+        <owl:inverseOf rdf:resource="https://wanqin-liu.github.io/ahkto/isArchitecturalStratigraphicUnitOf"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalStratigraphicUnit"/>
+        <rdfs:label xml:lang="en">has architectural stratigraphic unit</rdfs:label>
+        <skos:scopeNote xml:lang="en">Relates an element to a recognisable portion of its fabric interpreted as evidence of construction, repair or alteration.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/hasArchitecturalStyle -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/hasArchitecturalStyle">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"/>
+        <owl:inverseOf rdf:resource="https://wanqin-liu.github.io/ahkto/isArchitecturalStyleOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+                    <rdf:Description rdf:about="https://wanqin-liu.github.io/ahkto/Building"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalStyle"/>
+        <rdfs:label xml:lang="en">has architectural style</rdfs:label>
+        <skos:scopeNote xml:lang="en">This property relates a building or an architectural element to an architectural style that characterises its formal composition, design principles, or decorative expression. Different architectural styles may be associated with the same building or element, reflecting stylistic variations, historical alterations, or later interventions. The assignment represents a stylistic classification and does not necessarily indicate the date of construction..</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/hasBuildingType -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/hasBuildingType">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"/>
+        <owl:inverseOf rdf:resource="https://wanqin-liu.github.io/ahkto/isBuildingTypeOf"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/Building"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/BuildingType"/>
+        <rdfs:label xml:lang="en">has building type</rdfs:label>
+        <skos:scopeNote xml:lang="en">Classifies a building according to its use, function or architectural organisation.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/hasClassicalOrder -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/hasClassicalOrder">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"/>
+        <owl:inverseOf rdf:resource="https://wanqin-liu.github.io/ahkto/isClassicalOrderOf"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/ClassicalOrder"/>
+        <rdfs:label xml:lang="en">has classical order</rdfs:label>
+        <skos:scopeNote xml:lang="en">This property relates an architectural element to a classical architectural order identified through its formal characteristics, proportions, and decorative details. It supports the classification of elements associated with the Doric, Ionic, Corinthian, Tuscan, or Composite orders, including columns, pilasters, capitals, and entablatures. The assignment reflects the architectural characteristics of the element and does not necessarily imply that it belongs to a complete classical order system.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/hasComponentID -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/hasComponentID">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by"/>
+        <owl:inverseOf rdf:resource="https://wanqin-liu.github.io/ahkto/isComponentIDOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing"/>
+                    <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E53_Place"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/ComponentID"/>
+        <rdfs:label xml:lang="en">has component id</rdfs:label>
+        <skos:scopeNote xml:lang="en">Associates an instance of E24 Physical Human-Made Thing or E53 Place with a component identifier assigned within a particular recording system. In AHKTO this covers physical architectural entities and spatial entities; the domain is the union of the two CRM classes.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/hasConstructionTechnique -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/hasConstructionTechnique">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"/>
+        <owl:inverseOf rdf:resource="https://wanqin-liu.github.io/ahkto/isConstructionTechniqueOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+                    <rdf:Description rdf:about="https://wanqin-liu.github.io/ahkto/ArchitecturalStratigraphicUnit"/>
+                    <rdf:Description rdf:about="https://wanqin-liu.github.io/ahkto/Building"/>
+                    <rdf:Description rdf:about="https://wanqin-liu.github.io/ahkto/ConstructionalLayer"/>
+                    <rdf:Description rdf:about="https://wanqin-liu.github.io/ahkto/DiscreteBuildingUnit"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/ConstructionTechnique"/>
+        <rdfs:label xml:lang="en">has construction technique</rdfs:label>
+        <skos:scopeNote xml:lang="en">Records a construction technique used to form or assemble a building, architectural element, architectural stratigraphic unit, constructional layer or discrete building unit.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/hasConstructionalLayer -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/hasConstructionalLayer">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of"/>
+        <owl:inverseOf rdf:resource="https://wanqin-liu.github.io/ahkto/isConstructionalLayerOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+                    <rdf:Description rdf:about="https://wanqin-liu.github.io/ahkto/ArchitecturalStratigraphicUnit"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/ConstructionalLayer"/>
+        <rdfs:label xml:lang="en">has constructional layer</rdfs:label>
+        <skos:scopeNote xml:lang="en">Identifies a material layer within an element or a stratigraphic unit. Use evidence of position, fabric or function to distinguish the layer.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/hasDecorativeFeature -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/hasDecorativeFeature">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of"/>
+        <owl:inverseOf rdf:resource="https://wanqin-liu.github.io/ahkto/isDecorativeFeatureOf"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalDecorativeFeature"/>
+        <rdfs:label xml:lang="en">has decorative feature</rdfs:label>
+        <skos:scopeNote xml:lang="en">Identifies decoration executed on or in the material of an element and dependent on that support.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/hasDiscreteBuildingUnit -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/hasDiscreteBuildingUnit">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of"/>
+        <owl:inverseOf rdf:resource="https://wanqin-liu.github.io/ahkto/isDiscreteBuildingUnitOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+                    <rdf:Description rdf:about="https://wanqin-liu.github.io/ahkto/ArchitecturalStratigraphicUnit"/>
+                    <rdf:Description rdf:about="https://wanqin-liu.github.io/ahkto/ConstructionalLayer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/DiscreteBuildingUnit"/>
+        <rdfs:label xml:lang="en">has discrete building unit</rdfs:label>
+        <skos:scopeNote xml:lang="en">Identifies an individual piece of construction fabric within any of the three stated domains. Multiple descriptions may refer to the same physical unit.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/hasDomeType -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/hasDomeType">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"/>
+        <owl:inverseOf rdf:resource="https://wanqin-liu.github.io/ahkto/isDomeTypeOf"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/Dome"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/DomeType"/>
+        <rdfs:label xml:lang="en">has dome type</rdfs:label>
+        <skos:scopeNote xml:lang="en">Assigns a form or construction category to an individual dome.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/hasElement -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/hasElement">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of"/>
+        <owl:inverseOf rdf:resource="https://wanqin-liu.github.io/ahkto/isElementOf"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/Building"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:label xml:lang="en">has element</rdfs:label>
+        <skos:scopeNote xml:lang="en">Relates a building to a physical element of its fabric. Record the host building even when the element also bounds two spaces.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/hasInformationResource -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/hasInformationResource">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"/>
+        <owl:inverseOf rdf:resource="https://wanqin-liu.github.io/ahkto/isInformationResourceOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing"/>
+                    <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E53_Place"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+        <rdfs:label xml:lang="en">has information resource</rdfs:label>
+        <skos:scopeNote xml:lang="en">This property associates an identifiable physical human-made thing or place with an information resource that refers to, describes, documents, depicts, or otherwise provides information concerning it.
+
+The property supports the association of architectural heritage and its constituent components or spatial locations with heterogeneous information resources, including textual documents, photographs, drawings, audio recordings, videos, point clouds, geometric models, and building information models.
+
+The association is independent of the information resource&apos;s medium, format, production technique, temporal coverage, or documentary purpose. Information resources may concern existing conditions, historical configurations, conservation activities, proposed designs, or hypothetical reconstructions.
+
+This property establishes a general semantic association between a physical human-made thing or place and an information resource. It does not imply that the information resource provides an accurate representation of the current physical state of the referenced subject, nor does it establish the historical validity of the information it contains. More specific relationships may be expressed through additional properties where necessary.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/hasMasonryUnitType -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/hasMasonryUnitType">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"/>
+        <owl:inverseOf rdf:resource="https://wanqin-liu.github.io/ahkto/isMasonryUnitTypeOf"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/MasonryUnit"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/MasonryUnitType"/>
+        <rdfs:label xml:lang="en">has masonry unit type</rdfs:label>
+        <skos:scopeNote xml:lang="en">Classifies an individual masonry unit by its manufacture, form or constructional use.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/hasPart -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/hasPart">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of"/>
+        <owl:inverseOf rdf:resource="https://wanqin-liu.github.io/ahkto/isPartOf"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+                    <rdf:Description rdf:about="https://wanqin-liu.github.io/ahkto/SculptureObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">has part</rdfs:label>
+        <skos:scopeNote xml:lang="en">Relates an element to a constituent element or an incorporated sculpture. Installation as part of the host distinguishes this relation from the presence of an object in the same room.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/hasStorey -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/hasStorey">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P59_has_section"/>
+        <owl:inverseOf rdf:resource="https://wanqin-liu.github.io/ahkto/isStoreyOf"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/Building"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/Storey"/>
+        <rdfs:label xml:lang="en">has storey</rdfs:label>
+        <skos:scopeNote xml:lang="en">Identifies a level within the vertical organisation of a building.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/hasVaultType -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/hasVaultType">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"/>
+        <owl:inverseOf rdf:resource="https://wanqin-liu.github.io/ahkto/isVaultTypeOf"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/Vault"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/VaultType"/>
+        <rdfs:label xml:lang="en">has vault type</rdfs:label>
+        <skos:scopeNote xml:lang="en">Assigns a geometric or structural category to an individual vault.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/intersectsArchitecturalSpace -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/intersectsArchitecturalSpace">
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalSpace"/>
+        <rdfs:label xml:lang="en">intersects architectural space</rdfs:label>
+        <skos:scopeNote xml:lang="en">Relates an architectural element to a space when the element crosses the spatial boundary and extends into the interior.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/intersectsElement -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/intersectsElement">
+        <owl:inverseOf rdf:resource="https://wanqin-liu.github.io/ahkto/intersectsArchitecturalSpace"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalSpace"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:label xml:lang="en">intersects element</rdfs:label>
+        <skos:scopeNote xml:lang="en">Relates a space to an architectural element whose physical volume crosses the boundary of the space and extends into its interior.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/intersectsWith -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/intersectsWith">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P121_overlaps_with"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://wanqin-liu.github.io/ahkto/ArchitecturalSpace"/>
+                    <rdf:Description rdf:about="https://wanqin-liu.github.io/ahkto/Storey"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://wanqin-liu.github.io/ahkto/ArchitecturalSpace"/>
+                    <rdf:Description rdf:about="https://wanqin-liu.github.io/ahkto/Storey"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">intersects with</rdfs:label>
+        <skos:scopeNote xml:lang="en">Relates two spatial extents whose interiors overlap. Either extent may be an architectural space or a storey. The relation reads in both directions.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/isArchTypeOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/isArchTypeOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2i_is_type_of"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/ArchType"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/Arch"/>
+        <rdfs:label xml:lang="en">is arch type of</rdfs:label>
+        <skos:scopeNote xml:lang="en">Inverse of ahkto:hasArchType. Read from the object to the subject: Assigns a form or construction category to an individual arch.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/isArchitecturalDecorationTypeOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/isArchitecturalDecorationTypeOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2i_is_type_of"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalDecorationType"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalDecorativeFeature"/>
+        <rdfs:label xml:lang="en">is architectural decoration type of</rdfs:label>
+        <skos:scopeNote xml:lang="en">Inverse of ahkto:hasArchitecturalDecorationType. Read from the object to the subject: Classifies a decorative feature by a recorded aspect of its medium, form or motif.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/isArchitecturalSpaceOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/isArchitecturalSpaceOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P59i_is_located_on_or_within"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalSpace"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/Building"/>
+        <rdfs:label xml:lang="en">is architectural space of</rdfs:label>
+        <skos:scopeNote xml:lang="en">Inverse of ahkto:hasArchitecturalSpace. Read from the object to the subject: Relates a building to an identifiable architectural space belonging to it. This relation can describe a space extending across several storeys.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/isArchitecturalStratigraphicUnitOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/isArchitecturalStratigraphicUnitOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P46i_forms_part_of"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalStratigraphicUnit"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:label xml:lang="en">is architectural stratigraphic unit of</rdfs:label>
+        <skos:scopeNote xml:lang="en">Inverse of ahkto:hasArchitecturalStratigraphicUnit. Read from the object to the subject: Relates an element to a recognisable portion of its fabric interpreted as evidence of construction, repair or alteration.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/isArchitecturalStyleOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/isArchitecturalStyleOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2i_is_type_of"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalStyle"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+                    <rdf:Description rdf:about="https://wanqin-liu.github.io/ahkto/Building"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">is architectural style of</rdfs:label>
+        <skos:scopeNote xml:lang="en">Inverse of ahkto:hasArchitecturalStyle. Read from the object to the subject: This property relates a building or an architectural element to an architectural style that characterises its formal composition, design principles, or decorative expression. Different architectural styles may be associated with the same building or element, reflecting stylistic variations, historical alterations, or later interventions. The assignment represents a stylistic classification and does not necessarily indicate the date of construction..</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/isBoundedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/isBoundedBy">
+        <owl:inverseOf rdf:resource="https://wanqin-liu.github.io/ahkto/bounds"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalSpace"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:label xml:lang="en">is bounded by</rdfs:label>
+        <skos:scopeNote xml:lang="en">Identifies an element that defines part of a space’s boundary. An open or partially enclosed space can have recorded boundaries.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/isBuildingTypeOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/isBuildingTypeOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2i_is_type_of"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/BuildingType"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/Building"/>
+        <rdfs:label xml:lang="en">is building type of</rdfs:label>
+        <skos:scopeNote xml:lang="en">Inverse of ahkto:hasBuildingType. Read from the object to the subject: Classifies a building according to its use, function or architectural organisation.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/isClassicalOrderOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/isClassicalOrderOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2i_is_type_of"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/ClassicalOrder"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:label xml:lang="en">is classical order of</rdfs:label>
+        <skos:scopeNote xml:lang="en">Inverse of ahkto:hasClassicalOrder. Read from the object to the subject: This property relates an architectural element to a classical architectural order identified through its formal characteristics, proportions, and decorative details. It supports the classification of elements associated with the Doric, Ionic, Corinthian, Tuscan, or Composite orders, including columns, pilasters, capitals, and entablatures. The assignment reflects the architectural characteristics of the element and does not necessarily imply that it belongs to a complete classical order system.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/isComponentIDOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/isComponentIDOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P1i_identifies"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/ComponentID"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing"/>
+                    <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E53_Place"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">is component id of</rdfs:label>
+        <skos:scopeNote xml:lang="en">Inverse of ahkto:hasComponentID. Read from the object to the subject: Associates an instance of E24 Physical Human-Made Thing or E53 Place with a component identifier assigned within a particular recording system. In AHKTO this covers physical architectural entities and spatial entities; the domain is the union of the two CRM classes.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/isConstructionTechniqueOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/isConstructionTechniqueOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2i_is_type_of"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/ConstructionTechnique"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+                    <rdf:Description rdf:about="https://wanqin-liu.github.io/ahkto/ArchitecturalStratigraphicUnit"/>
+                    <rdf:Description rdf:about="https://wanqin-liu.github.io/ahkto/Building"/>
+                    <rdf:Description rdf:about="https://wanqin-liu.github.io/ahkto/ConstructionalLayer"/>
+                    <rdf:Description rdf:about="https://wanqin-liu.github.io/ahkto/DiscreteBuildingUnit"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">is construction technique of</rdfs:label>
+        <skos:scopeNote xml:lang="en">Inverse of ahkto:hasConstructionTechnique. Read from the object to the subject: Records a construction technique used to form or assemble a building, architectural element, architectural stratigraphic unit, constructional layer or discrete building unit.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/isConstructionalLayerOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/isConstructionalLayerOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P46i_forms_part_of"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/ConstructionalLayer"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+                    <rdf:Description rdf:about="https://wanqin-liu.github.io/ahkto/ArchitecturalStratigraphicUnit"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">is constructional layer of</rdfs:label>
+        <skos:scopeNote xml:lang="en">Inverse of ahkto:hasConstructionalLayer. Read from the object to the subject: Identifies a material layer within an element or a stratigraphic unit. Use evidence of position, fabric or function to distinguish the layer.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/isContainedAsASculptureIn -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/isContainedAsASculptureIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/SculptureObject"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalSpace"/>
+        <rdfs:label xml:lang="en">is contained as a sculpture in</rdfs:label>
+        <skos:scopeNote xml:lang="en">Identifies the architectural space in which a sculpture object is located.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/isContainedAsAnArchitecturalSpaceIn -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/isContainedAsAnArchitecturalSpaceIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P89_falls_within"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalSpace"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/Storey"/>
+        <rdfs:label xml:lang="en">is contained as an architectural space in</rdfs:label>
+        <skos:scopeNote xml:lang="en">Identifies the storey within whose spatial extent an architectural space lies.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/isContainedAsAnElementIn -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/isContainedAsAnElementIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalSpace"/>
+        <rdfs:label xml:lang="en">is contained as an element in</rdfs:label>
+        <skos:scopeNote xml:lang="en">Identifies the architectural space containing an architectural element.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/isDecorativeFeatureOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/isDecorativeFeatureOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P46i_forms_part_of"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalDecorativeFeature"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:label xml:lang="en">is decorative feature of</rdfs:label>
+        <skos:scopeNote xml:lang="en">Inverse of ahkto:hasDecorativeFeature. Read from the object to the subject: Identifies decoration executed on or in the material of an element and dependent on that support.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/isDiscreteBuildingUnitOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/isDiscreteBuildingUnitOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P46i_forms_part_of"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/DiscreteBuildingUnit"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+                    <rdf:Description rdf:about="https://wanqin-liu.github.io/ahkto/ArchitecturalStratigraphicUnit"/>
+                    <rdf:Description rdf:about="https://wanqin-liu.github.io/ahkto/ConstructionalLayer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">is discrete building unit of</rdfs:label>
+        <skos:scopeNote xml:lang="en">Inverse of ahkto:hasDiscreteBuildingUnit. Read from the object to the subject: Identifies an individual piece of construction fabric within any of the three stated domains. Multiple descriptions may refer to the same physical unit.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/isDomeTypeOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/isDomeTypeOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2i_is_type_of"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/DomeType"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/Dome"/>
+        <rdfs:label xml:lang="en">is dome type of</rdfs:label>
+        <skos:scopeNote xml:lang="en">Inverse of ahkto:hasDomeType. Read from the object to the subject: Assigns a form or construction category to an individual dome.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/isElementOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/isElementOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P46i_forms_part_of"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/Building"/>
+        <rdfs:label xml:lang="en">is element of</rdfs:label>
+        <skos:scopeNote xml:lang="en">Inverse of ahkto:hasElement. Read from the object to the subject: Relates a building to a physical element of its fabric. Record the host building even when the element also bounds two spaces.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/isInformationResourceOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/isInformationResourceOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P67_refers_to"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing"/>
+                    <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E53_Place"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">is information resource of</rdfs:label>
+        <skos:scopeNote xml:lang="en">This is the inverse of ahkto: has information resource. It associates an information resource with a physical human-made thing or place that the resource refers to, describes, documents, depicts or otherwise concerns. It carries the same qualifications concerning representation, accuracy and historical validity as the forward property.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/isMasonryUnitTypeOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/isMasonryUnitTypeOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2i_is_type_of"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/MasonryUnitType"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/MasonryUnit"/>
+        <rdfs:label xml:lang="en">is masonry unit type of</rdfs:label>
+        <skos:scopeNote xml:lang="en">Inverse of ahkto:hasMasonryUnitType. Read from the object to the subject: Classifies an individual masonry unit by its manufacture, form or constructional use.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/isPartOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/isPartOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P46i_forms_part_of"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+                    <rdf:Description rdf:about="https://wanqin-liu.github.io/ahkto/SculptureObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:label xml:lang="en">is part of</rdfs:label>
+        <skos:scopeNote xml:lang="en">Inverse of ahkto:hasPart. Read from the object to the subject: Relates an element to a constituent element or an incorporated sculpture. Installation as part of the host distinguishes this relation from the presence of an object in the same room.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/isStoreyOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/isStoreyOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P59i_is_located_on_or_within"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/Storey"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/Building"/>
+        <rdfs:label xml:lang="en">is storey of</rdfs:label>
+        <skos:scopeNote xml:lang="en">Inverse of ahkto:hasStorey. Read from the object to the subject: Identifies a level within the vertical organisation of a building.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/isVaultTypeOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://wanqin-liu.github.io/ahkto/isVaultTypeOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2i_is_type_of"/>
+        <rdfs:domain rdf:resource="https://wanqin-liu.github.io/ahkto/VaultType"/>
+        <rdfs:range rdf:resource="https://wanqin-liu.github.io/ahkto/Vault"/>
+        <rdfs:label xml:lang="en">is vault type of</rdfs:label>
+        <skos:scopeNote xml:lang="en">Inverse of ahkto:hasVaultType. Read from the object to the subject: Assigns a geometric or structural category to an individual vault.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/Acroteria -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/Acroteria">
+        <rdfs:subClassOf rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:label xml:lang="en">Acroteria</rdfs:label>
+        <skos:scopeNote xml:lang="en">An ornament placed at the summit or at a lower corner of a pediment. Each ornament can be recorded individually, whether it takes the form of foliage, a figure or another sculptural motif.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300002214"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/Aedicules -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/Aedicules">
+        <rdfs:subClassOf rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalAssemblies"/>
+        <rdfs:label xml:lang="en">Aedicules</rdfs:label>
+        <skos:scopeNote xml:lang="en">A small shrine or architectural frame that gives a niche, image or opening the form of a miniature building. Supports and a crowning member define the frame.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300002574"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/Arch -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/Arch">
+        <rdfs:subClassOf rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:label xml:lang="en">Arch</rdfs:label>
+        <skos:scopeNote xml:lang="en">A curved or pointed construction spanning an opening and transmitting load to supports at its springings. Its constituent voussoirs may be recorded individually.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300000994"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/ArchType -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/ArchType">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+        <rdfs:label xml:lang="en">Arch Type</rdfs:label>
+        <skos:scopeNote xml:lang="en">A controlled concept used to classify an arch by a stated criterion such as profile or construction.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/ArchitecturalAssemblies -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/ArchitecturalAssemblies">
+        <rdfs:subClassOf rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:label xml:lang="en">Architectural Assemblies</rdfs:label>
+        <skos:scopeNote xml:lang="en">An arrangement of architectural elements identifiable as a single composition. Its identity depends on how the members work together, even where individual elements also have records.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/ArchitecturalDecorationType -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/ArchitecturalDecorationType">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+        <rdfs:label xml:lang="en">Architectural Decoration Type</rdfs:label>
+        <skos:scopeNote xml:lang="en">A controlled concept classifying an architectural decorative feature by its form, medium or motif. The same concept may describe decorative features on different supporting elements.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/ArchitecturalDecorativeFeature -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/ArchitecturalDecorativeFeature">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E25_Human-Made_Feature"/>
+        <rdfs:label xml:lang="en">Architectural Decorative Feature</rdfs:label>
+        <skos:scopeNote xml:lang="en">This class comprises identifiable decorative features intentionally created on or within architectural elements through human activity. Such features are physically integrated with their supporting architectural elements and cannot be separated from them without altering their physical integrity.
+
+Instances of this class may include figurative paintings, frescoes, graffiti, carved reliefs, ornamental motifs, decorative moldings, and modeled stucco decorations executed directly on architectural surfaces. These features may serve aesthetic, artistic, symbolic, or iconographic purposes and do not necessarily perform a structural function.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300378995"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/ArchitecturalElement -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/ArchitecturalElement">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing"/>
+        <rdfs:label xml:lang="en">Architectural Element</rdfs:label>
+        <skos:scopeNote xml:lang="en">A physically identifiable element of an architectural work, distinguished by its architectural form, function, or constructional characteristics, whether or not it constitutes an independently manufactured or assembled unit.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300000885"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/ArchitecturalSpace -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/ArchitecturalSpace">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E53_Place"/>
+        <rdfs:label xml:lang="en">Architectural Space</rdfs:label>
+        <skos:scopeNote xml:lang="en">This class comprises identifiable spatial regions within or associated with architectural works, defined by their architectural configuration, spatial boundaries, or architectural functions. Instances of this class may be enclosed, partially enclosed, or open spaces, including rooms, halls, corridors, naves, chapels, and courtyards.
+
+An architectural space may be defined or bounded by one or more architectural elements, such as walls, columns, floors, and vaults. The spatial extent of an architectural space may overlap with the physical volume occupied by architectural elements, depending on how its boundaries are defined. Architectural spaces may contain physical objects, including furniture, sculptures, and other movable or immovable objects.
+
+Instances of this class may be associated with a building as a whole or with a particular storey. They may also extend across multiple storeys and have spatial relationships with other architectural spaces, such as adjacency and containment.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300420294"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/ArchitecturalStratigraphicUnit -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/ArchitecturalStratigraphicUnit">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing"/>
+        <rdfs:label xml:lang="en">Architectural Stratigraphic Unit</rdfs:label>
+        <skos:scopeNote xml:lang="en">This class comprises physically identifiable portions of historic buildings formed through distinguishable episodes of human construction, reconstruction, modification, or repair. Each instance represents a stratigraphically coherent physical unit, which may consist of multiple materials or construction elements, with recognizable boundaries or discontinuities that distinguish it from adjacent building fabric and provide evidence of its formation history.
+
+Instances may remain physically integrated with the surrounding building fabric while retaining a distinct stratigraphic identity. Their identification does not necessarily require a precise date or attribution to a known historical event.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/ArchitecturalStyle -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/ArchitecturalStyle">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+        <rdfs:label xml:lang="en">Architectural Style</rdfs:label>
+        <skos:scopeNote xml:lang="en">This class comprises controlled concepts used to classify buildings, architectural elements, architectural stratigraphic units, constructional layers and discrete building units according to characteristic formal, compositional and decorative features associated with recognised architectural styles or historical traditions. Stylistic categories may be identified through architectural design, proportions, ornamentation and other morphological characteristics. An entity may be associated with multiple architectural styles where construction, modification or restoration reflects different stylistic influences.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/Architrave -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/Architrave">
+        <rdfs:subClassOf rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:label xml:lang="en">Architrave</rdfs:label>
+        <skos:scopeNote xml:lang="en">In the context of a classical entablature, the lowermost horizontal division immediately above the supports.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300001780"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/Ashlar -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/Ashlar">
+        <rdfs:subClassOf rdf:resource="https://wanqin-liu.github.io/ahkto/DiscreteBuildingUnit"/>
+        <rdfs:label xml:lang="en">Ashlar</rdfs:label>
+        <skos:scopeNote xml:lang="en">An individual dressed building stone with accurately worked bedding and joint faces. Here the record identifies a block within the masonry.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300011701"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/Audio -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/Audio">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+        <rdfs:label xml:lang="en">Audio</rdfs:label>
+        <skos:scopeNote xml:lang="en">This class comprises identifiable information resources whose content is primarily expressed through sound. It includes audio recordings, oral histories, interviews, spoken narratives, and environmental or architectural sound recordings associated with built heritage. Audio resources may document actual events and existing conditions, communicate historical interpretations, or present proposed experiences and narratives. The class is defined by its auditory form rather than its documentary purpose, linguistic content, recording technology, or digital file format.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300028633"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/BIMModel -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/BIMModel">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+        <rdfs:label xml:lang="en">BIM Model</rdfs:label>
+        <skos:scopeNote xml:lang="en">This class comprises identifiable digital building information resources that organize architectural and construction-related information through structured representations of buildings, their components, attributes, and relationships. BIM models may integrate geometric representations with semantic descriptions, material information, spatial organization, and other building-related data. They may describe existing buildings, proposed designs, historical reconstructions, or conservation interventions. The class includes Heritage Building Information Models (HBIM) and is independent of a particular authoring application, exchange format, or geometric representation method. Unlike a purely geometric model, a BIM model provides an explicit information structure for representing building elements and their associated properties and relationships.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/Building -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/Building">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing"/>
+        <rdfs:label xml:lang="en">Building</rdfs:label>
+        <skos:scopeNote xml:lang="en">This class comprises physically constructed buildings that form identifiable architectural wholes, consisting of interconnected architectural elements and enclosing or organising spaces. A building may contain multiple storeys and architectural spaces and retains its identity despite changes in function or internal spatial organisation.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300004792"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/BuildingType -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/BuildingType">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+        <rdfs:label xml:lang="en">Building Type</rdfs:label>
+        <skos:scopeNote xml:lang="en">This class comprises controlled concepts used to classify buildings according to their intended function, historical or current use, or architectural organization. Instances of this class may describe functional or typological categories, and a building may be assigned multiple types or different classifications over time as its use or interpretation changes.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/ClassicalOrder -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/ClassicalOrder">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+        <rdfs:label xml:lang="en">Classical Order</rdfs:label>
+        <skos:scopeNote xml:lang="en">This class comprises controlled concepts representing classical architectural orders used to classify architectural elements according to their formal and stylistic characteristics. The five orders considered are Doric, Ionic, Corinthian, Tuscan, and Composite. These concepts are identified using Getty Art &amp; Architecture Thesaurus (AAT) URIs.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300404750"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/Column -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/Column">
+        <rdfs:subClassOf rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:label xml:lang="en">Column</rdfs:label>
+        <skos:scopeNote xml:lang="en">An upright architectural member with a shaft, used to carry a load or to express support. The shaft, capital and any base may be identified individually.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300001571"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/ColumnBase -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/ColumnBase">
+        <rdfs:subClassOf rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:label xml:lang="en">Column Base</rdfs:label>
+        <skos:scopeNote xml:lang="en">The lower member on which a column shaft stands. Plinths and mouldings may be recorded as parts where survey resolution permits.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300233843"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/ColumnCapital -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/ColumnCapital">
+        <rdfs:subClassOf rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:label xml:lang="en">Column Capital</rdfs:label>
+        <skos:scopeNote xml:lang="en">The upper member of a column, at the transition from shaft to the element above. The capital may provide evidence for assigning a classical order.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300001662"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/ColumnShaft -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/ColumnShaft">
+        <rdfs:subClassOf rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:label xml:lang="en">Column Shaft</rdfs:label>
+        <skos:scopeNote xml:lang="en">The main upright body of a column between its foot and capital. A shaft can consist of several drums while remaining one architectural element.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300001754"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/ComponentID -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/ComponentID">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier"/>
+        <rdfs:label xml:lang="en">Component ID</rdfs:label>
+        <skos:scopeNote xml:lang="en">An identifier assigned to distinguish a particular architectural entity within a survey, inventory or information system. The same component may carry identifiers from more than one scheme.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/ConstructionTechnique -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/ConstructionTechnique">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+        <rdfs:label xml:lang="en">Construction Technique</rdfs:label>
+        <skos:scopeNote xml:lang="en">A controlled concept denoting a method of assembling, shaping or applying building fabric. The same technique can classify work undertaken at different dates.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300379526"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/ConstructionalLayer -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/ConstructionalLayer">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing"/>
+        <rdfs:label xml:lang="en">Constructional Layer</rdfs:label>
+        <skos:scopeNote xml:lang="en">A physically identifiable layer of an architectural element, distinguished by its material composition, constructional function, or position within a layered assembly. It may constitute a structural, protective, or finishing layer and can be identified as a distinct physical part regardless of whether it was formed through a single or multiple construction activities.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/Cornice -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/Cornice">
+        <rdfs:subClassOf rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:label xml:lang="en">Cornice</rdfs:label>
+        <skos:scopeNote xml:lang="en">A projecting horizontal member that crowns an entablature or terminates a wall. The projection may also throw rainwater clear of the surface below.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300001788"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/DiscreteBuildingUnit -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/DiscreteBuildingUnit">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing"/>
+        <rdfs:label xml:lang="en">Discrete Building Unit</rdfs:label>
+        <skos:scopeNote xml:lang="en">An individually distinguishable piece of building fabric used in construction or assembly. Its physical boundaries allow the same piece to be followed through reuse or displacement.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/Dome -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/Dome">
+        <rdfs:subClassOf rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:label xml:lang="en">Dome</rdfs:label>
+        <skos:scopeNote xml:lang="en">A curved covering rising above a space around a central area or axis. This class identifies the physical covering, including domes formed by several shells.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300001280"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/DomeType -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/DomeType">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+        <rdfs:label xml:lang="en">Dome Type</rdfs:label>
+        <skos:scopeNote xml:lang="en">A controlled concept used to classify domes by form or construction. The classification can describe a shell arrangement independently of its material.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/Drawing -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/Drawing">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+        <rdfs:label xml:lang="en">Drawing</rdfs:label>
+        <skos:scopeNote xml:lang="en">This class comprises identifiable graphical information resources that represent architectural forms, spatial configurations, dimensions, construction details, or design concepts through lines, symbols, annotations, and other graphic conventions. It includes manually produced and computer-aided drawings, such as architectural plans, elevations, sections, measured survey drawings, technical drawings, and reconstruction drawings. Drawings may document existing or historical conditions, communicate design proposals, or express hypothetical interpretations of architectural structures. The class concerns the informational content of drawings, independently of their production technique, physical support, or digital format. Two-dimensional CAD drawings are included, whereas three-dimensional geometric models are represented separately.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300033973"/>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300034395"/>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300034787"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/EngagedColumn -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/EngagedColumn">
+        <rdfs:subClassOf rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:label xml:lang="en">Engaged Column</rdfs:label>
+        <skos:scopeNote xml:lang="en">A column whose shaft projects from and is partly embedded in a wall or pier. Its exposed shaft retains the profile of a column.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300001638"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/Entablature -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/Entablature">
+        <rdfs:subClassOf rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:label xml:lang="en">Entablature</rdfs:label>
+        <skos:scopeNote xml:lang="en">The horizontal superstructure of a classical order. Its architrave, frieze and cornice can be recorded individually even where they are cut from the same stone.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300001770"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/Facade -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/Facade">
+        <rdfs:subClassOf rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalAssemblies"/>
+        <rdfs:label xml:lang="en">Facade</rdfs:label>
+        <skos:scopeNote xml:lang="en">The exterior face of a building considered as a composed whole, including its openings, divisions and applied elements. Each elevation may be documented separately.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300002526"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/FinalRender -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/FinalRender">
+        <rdfs:subClassOf rdf:resource="https://wanqin-liu.github.io/ahkto/ConstructionalLayer"/>
+        <rdfs:label xml:lang="en">Final Render</rdfs:label>
+        <skos:scopeNote xml:lang="en">The outer finishing coat of a render system. The surface may be worked or coloured, while the coat remains identifiable by its position and material extent.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/Frieze -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/Frieze">
+        <rdfs:subClassOf rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:label xml:lang="en">Frieze</rdfs:label>
+        <skos:scopeNote xml:lang="en">The middle division of an entablature, between architrave and cornice. Surface carving may be recorded as a decorative feature of the frieze.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300001816"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/GeometricModel -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/GeometricModel">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+        <rdfs:label xml:lang="en">Geometric Model</rdfs:label>
+        <skos:scopeNote xml:lang="en">This class comprises identifiable digital information resources that represent the three-dimensional geometry of physical or conceptual objects through explicit or mathematically defined geometric structures. Such representations may include polygonal meshes, boundary representations, NURBS curves and surfaces, solid models, and parametric geometric models. Geometric models may describe surveyed architectural conditions, document historical configurations, support hypothetical reconstructions, or communicate design proposals. The class emphasizes geometric representation and does not require the explicit semantic classification of architectural components or the information structures characteristic of Building Information Modeling.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/Keystone -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/Keystone">
+        <rdfs:subClassOf rdf:resource="https://wanqin-liu.github.io/ahkto/DiscreteBuildingUnit"/>
+        <rdfs:label xml:lang="en">Keystone</rdfs:label>
+        <skos:scopeNote xml:lang="en">The crown unit closing an arch or a corresponding convergence of vault members. Record its position in the arch separately from any carving on its exposed face.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300001183"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/LevellingCoat -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/LevellingCoat">
+        <rdfs:subClassOf rdf:resource="https://wanqin-liu.github.io/ahkto/ConstructionalLayer"/>
+        <rdfs:label xml:lang="en">Levelling Coat</rdfs:label>
+        <skos:scopeNote xml:lang="en">A preparatory coat applied to fill irregularities and establish a plane for a later finish. Its position beneath that finish helps identify it in an exposed section.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/MasonryLayer -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/MasonryLayer">
+        <rdfs:subClassOf rdf:resource="https://wanqin-liu.github.io/ahkto/ConstructionalLayer"/>
+        <rdfs:label xml:lang="en">Masonry Layer</rdfs:label>
+        <skos:scopeNote xml:lang="en">A coherent thickness of masonry within a larger element, distinguished by its position or construction. A layer can include numerous stones or bricks and their joints.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/MasonryUnit -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/MasonryUnit">
+        <rdfs:subClassOf rdf:resource="https://wanqin-liu.github.io/ahkto/DiscreteBuildingUnit"/>
+        <rdfs:label xml:lang="en">Masonry Unit</rdfs:label>
+        <skos:scopeNote xml:lang="en">An individual stone, brick or block laid as a constituent of masonry. A record identifies one unit even when many units share the same manufactured type.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300159910"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/MasonryUnitType -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/MasonryUnitType">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+        <rdfs:label xml:lang="en">Masonry Unit Type</rdfs:label>
+        <skos:scopeNote xml:lang="en">A controlled concept for classifying individual masonry units by form, manufacture or constructional use.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/Niche -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/Niche">
+        <rdfs:subClassOf rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:label xml:lang="en">Niche</rdfs:label>
+        <skos:scopeNote xml:lang="en">A recess formed in the face of a wall or another architectural element. Its back and sides define a distinct feature that may be recorded independently of any object displayed inside it.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300002704"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/Pediment -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/Pediment">
+        <rdfs:subClassOf rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:label xml:lang="en">Pediment</rdfs:label>
+        <skos:scopeNote xml:lang="en">A crowning element in the form of a gable above a portico, doorway or window. A pediment can be triangular, curved or broken. It includes the framing cornices and the field they enclose.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300002726"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/Photograph -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/Photograph">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+        <rdfs:label xml:lang="en">Photograph</rdfs:label>
+        <skos:scopeNote xml:lang="en">This class comprises identifiable information resources consisting of still photographic images produced through photographic processes, including analog and digital photography and the digitization of photographic originals. It includes historical photographs, contemporary survey photographs, detailed architectural photographs, and photographic documentation of construction and conservation activities. Photographs may depict existing architectural conditions, historical states, physical models, or proposed architectural designs. The class refers to photographic information content independently of its physical or digital carrier, file format, documentary function, or interpretation.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300046300"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/Pier -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/Pier">
+        <rdfs:subClassOf rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:label xml:lang="en">Pier</rdfs:label>
+        <skos:scopeNote xml:lang="en">A substantial upright support that carries the loads of an arch, vault or beam down to its footing. Its cross-section may be compound or polygonal.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300000953"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/Pilaster -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/Pilaster">
+        <rdfs:subClassOf rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:label xml:lang="en">Pilaster</rdfs:label>
+        <skos:scopeNote xml:lang="en">A shallow rectangular upright projecting from a wall face, often articulated with a base and capital. Its visible form can express an order even where the wall carries the load.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300002737"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/PointCloud -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/PointCloud">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+        <rdfs:label xml:lang="en">Point Cloud</rdfs:label>
+        <skos:scopeNote xml:lang="en">This class comprises identifiable digital information resources representing three-dimensional spatial information through collections of discrete points defined by spatial coordinates and, where available, additional attributes such as color, intensity, or surface classification. Point clouds may be generated through terrestrial laser scanning, photogrammetry, or other spatial data acquisition and processing techniques. They may represent surveyed architectural conditions, reconstructed historical configurations, or digitally generated design geometries. The class is distinguished from surface-based or parametric geometric models by its point-based spatial representation and is independent of the file format or acquisition method.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/Roof -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/Roof">
+        <rdfs:subClassOf rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:label xml:lang="en">Roof</rdfs:label>
+        <skos:scopeNote xml:lang="en">The upper construction that shelters a building from the weather, including its supporting and covering members where these are documented together.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300002098"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/RoofingTile -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/RoofingTile">
+        <rdfs:subClassOf rdf:resource="https://wanqin-liu.github.io/ahkto/DiscreteBuildingUnit"/>
+        <rdfs:label xml:lang="en">Roofing Tile</rdfs:label>
+        <skos:scopeNote xml:lang="en">An individual tile made to form part of an overlapping or interlocking roof covering. Its record may describe a unit in place or one recovered from the roof.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300010699"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/SculptureObject -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/SculptureObject">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object"/>
+        <rdfs:label xml:lang="en">Sculpture Object</rdfs:label>
+        <skos:scopeNote xml:lang="en">This class comprises identifiable, independently produced three-dimensional sculptural objects created through human activity, including statues, figurative sculptures, and ornamental sculptures. Such objects may exist independently or be incorporated into architectural elements as decorative components.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300047090"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/Serliana -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/Serliana">
+        <rdfs:subClassOf rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalAssemblies"/>
+        <rdfs:label xml:lang="en">Serliana</rdfs:label>
+        <skos:scopeNote xml:lang="en">A three-bay composition with an arched central opening and lower, flat-headed openings on either side. Record the complete composition at this level and its central arch as a component.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300311053"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/Storey -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/Storey">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E53_Place"/>
+        <rdfs:label xml:lang="en">Storey</rdfs:label>
+        <skos:scopeNote xml:lang="en">This class comprises identifiable spatial regions corresponding to the vertical organization of a building into distinct levels. Instances of this class represent spatial subdivisions of a building generally associated with a particular elevation or range of elevations.
+
+A storey may comprise one or more architectural spaces and may be associated with architectural elements located within or defining that level. Its spatial extent may be determined by the architectural configuration and vertical organization of the building.
+
+Instances of this class represent spatial regions rather than physical construction elements, and therefore should be distinguished from floor slabs, floor finishes, and other architectural elements forming the physical boundaries of a storey.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300002667"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/Text -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/Text">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+        <rdfs:label xml:lang="en">Text</rdfs:label>
+        <skos:scopeNote xml:lang="en">This class comprises identifiable information resources whose content is primarily expressed through written language. It includes historical records, archival documents, correspondence, scholarly publications, survey reports, conservation reports, descriptive accounts, and textual interpretations relating to architectural heritage. Textual resources may record actual conditions and historical events, present research findings, describe proposed interventions, or communicate hypothetical interpretations. The class concerns linguistic information content independently of its physical or digital carrier, publication status, file format, or documentary purpose. Textual content embedded in photographs, drawings, or other resources does not necessarily require the entire resource to be classified as Text.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/TimberUnit -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/TimberUnit">
+        <rdfs:subClassOf rdf:resource="https://wanqin-liu.github.io/ahkto/DiscreteBuildingUnit"/>
+        <rdfs:label xml:lang="en">Timber Unit</rdfs:label>
+        <skos:scopeNote xml:lang="en">One piece of worked timber incorporated into a construction. Joint lines and the continuity of the timber distinguish it from adjacent pieces.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/Vault -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/Vault">
+        <rdfs:subClassOf rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:label xml:lang="en">Vault</rdfs:label>
+        <skos:scopeNote xml:lang="en">A curved overhead construction spanning a space and transferring its loads to supporting walls or piers. Its geometry and its constituent units can be recorded at different levels.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300001324"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/VaultType -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/VaultType">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+        <rdfs:label xml:lang="en">Vault Type</rdfs:label>
+        <skos:scopeNote xml:lang="en">A controlled concept used to classify vaults by their geometry or structural arrangement.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/Video -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/Video">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+        <rdfs:label xml:lang="en">Video</rdfs:label>
+        <skos:scopeNote xml:lang="en">This class comprises identifiable information resources consisting of sequences of visual images intended to represent motion or changes over time, with or without accompanying sound. It includes audiovisual documentation, historical footage, survey recordings, animations, and digital presentations related to architectural heritage. Video resources may represent existing buildings, construction or conservation activities, historical transformations, proposed designs, or hypothetical reconstructions. The class is independent of the recording device, production technique, file format, and factual status of the represented content.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/Voussoir -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/Voussoir">
+        <rdfs:subClassOf rdf:resource="https://wanqin-liu.github.io/ahkto/DiscreteBuildingUnit"/>
+        <rdfs:label xml:lang="en">Voussoir</rdfs:label>
+        <skos:scopeNote xml:lang="en">An individual wedge-shaped unit in the curved ring of an arch or vault. Its radial joints help identify it within the assembled fabric.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300001177"/>
+    </owl:Class>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/Wall -->
+
+
+    <owl:Class rdf:about="https://wanqin-liu.github.io/ahkto/Wall">
+        <rdfs:subClassOf rdf:resource="https://wanqin-liu.github.io/ahkto/ArchitecturalElement"/>
+        <rdfs:label xml:lang="en">Wall</rdfs:label>
+        <skos:scopeNote xml:lang="en">A substantially vertical construction that encloses or divides space. Its thickness may include several leaves, a core and finishes, each of which can be recorded separately.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300002469"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/CompositeOrder -->
+
+
+    <owl:NamedIndividual rdf:about="https://wanqin-liu.github.io/ahkto/CompositeOrder">
+        <rdf:type rdf:resource="https://wanqin-liu.github.io/ahkto/ClassicalOrder"/>
+        <rdfs:label xml:lang="en">Composite order</rdfs:label>
+        <skos:scopeNote xml:lang="en">A classical-order concept used to classify elements whose capitals combine Corinthian foliage with Ionic volutes.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300067415"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/CorinthianOrder -->
+
+
+    <owl:NamedIndividual rdf:about="https://wanqin-liu.github.io/ahkto/CorinthianOrder">
+        <rdf:type rdf:resource="https://wanqin-liu.github.io/ahkto/ClassicalOrder"/>
+        <rdfs:label xml:lang="en">Corinthian order</rdfs:label>
+        <skos:scopeNote xml:lang="en">A classical-order concept used to classify elements with bell-shaped capitals ornamented with foliage, commonly acanthus, and spiral forms.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300067417"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/DoricOrder -->
+
+
+    <owl:NamedIndividual rdf:about="https://wanqin-liu.github.io/ahkto/DoricOrder">
+        <rdf:type rdf:resource="https://wanqin-liu.github.io/ahkto/ClassicalOrder"/>
+        <rdfs:label xml:lang="en">Doric order</rdfs:label>
+        <skos:scopeNote xml:lang="en">A classical-order concept used to classify elements with simple capitals and a triglyph-and-metope frieze; Greek Doric columns generally lack bases.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300067406"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/IonicOrder -->
+
+
+    <owl:NamedIndividual rdf:about="https://wanqin-liu.github.io/ahkto/IonicOrder">
+        <rdf:type rdf:resource="https://wanqin-liu.github.io/ahkto/ClassicalOrder"/>
+        <rdfs:label xml:lang="en">Ionic order</rdfs:label>
+        <skos:scopeNote xml:lang="en">A classical-order concept used to classify elements with volute capitals, moulded decoration and columns supported on bases.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300067423"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://wanqin-liu.github.io/ahkto/TuscanOrder -->
+
+
+    <owl:NamedIndividual rdf:about="https://wanqin-liu.github.io/ahkto/TuscanOrder">
+        <rdf:type rdf:resource="https://wanqin-liu.github.io/ahkto/ClassicalOrder"/>
+        <rdfs:label xml:lang="en">Tuscan order</rdfs:label>
+        <skos:scopeNote xml:lang="en">A classical-order concept used to classify elements with smooth columns, torus bases, simple cushion capitals and undecorated friezes.</skos:scopeNote>
+        <hasAATReference rdf:resource="http://vocab.getty.edu/aat/300067420"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
